@@ -14,10 +14,18 @@ namespace AnimalShelterApi.Controllers
       _db =db;
     }
     // Get api/animals
+    // Refactored to create paged responses
+    // Available for use at https://localhost:5001/swagger/index.html under GET
     [HttpGet]
-    public async Task<ActionResult<IEnumerable<Animal>>>Get()
+    public async Task<ActionResult<IEnumerable<Animal>>>GetAnimals([FromQuery] PaginationFilter filter)
     {
-      return await _db.Animals.ToListAsync();
+      var validFilter = new PaginationFilter(filter.PageNumber, filter.PageSize);
+      List<Animal> PagedResponse = await _db.Animals
+          .Skip((validFilter.PageNumber - 1) * validFilter.PageSize)
+          .Take(validFilter.PageSize)
+          .ToListAsync();
+      return Ok(new PagedResponse<List<Animal>>(PagedResponse, validFilter.PageNumber, validFilter.PageSize));
+      
     }
     // GET: api/Animals/5
     [HttpGet("{id}")]
