@@ -20,7 +20,6 @@ namespace AnimalShelterApi.Models
                 new Animal {AnimalId = 3, Name = "Daisy",  Sex = "Female", Type = "Dog", Weight = 50.5, Note = "Has no thoughts"},
                 new Animal {AnimalId = 4, Name = "Hank",  Sex = "male", Type = "Chicken", Weight = 6.5, Note = "Needs anger management"},
                 new Animal {AnimalId = 5, Name = "Beatrice", Sex = "Female", Type = "Cat", Weight = 40.5, Note = "Loves eating living her best life"},
-
                 new Animal {AnimalId = 6, Name = "Turty",  Sex = "Female", Type = "Turtle", Weight = 1.5, Note = "Loves lettuce and riding in the basket of a bicycle"},
                 new Animal {AnimalId = 7, Name = "Rabby",  Sex = "Male", Type = "Rabbit", Weight = 2, Note = "Meows sometimes"},
                 new Animal {AnimalId = 8, Name = "Hank II",  Sex = "Female", Type = "Chicken", Weight = 5.5, Note = "Hanks Daughter"},
