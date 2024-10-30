@@ -35,7 +35,7 @@ Note: In order for this application to work you will need to create called appse
     ```JSON
     {
     "ConnectionStrings": {
-        "DefaultConnection": "Server=localhost;Port=3306;database=ambi_hidalgo_animal_shelter;uid=[YOUR USERNAME];pwd=[YOUR PASSWORD];"
+        "DefaultConnection": "Server=localhost;Port=3306;database=ambi_hidalgo_animal_shelter;uid=root;pwd=epicodus;"
      }
     }
     ```
